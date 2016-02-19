@@ -1,13 +1,140 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="muP-np-yR7">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Parse Images Collection View Controller-->
+        <scene sceneID="CXC-Bh-jRb">
+            <objects>
+                <collectionViewController id="fAm-zr-8bo" customClass="ParseImagesCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="S2u-B2-Vdb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pm0-0M-S5M">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="Tep-as-6eI" customClass="ImageExampleCell">
+                                <rect key="frame" x="0.0" y="64" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QWd-zI-Ry5">
+                                            <rect key="frame" x="8" y="8" width="234" height="234"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="QWd-zI-Ry5" secondAttribute="trailing" id="2iP-BQ-nc7"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="QWd-zI-Ry5" secondAttribute="bottom" id="CIJ-IL-yOA"/>
+                                    <constraint firstItem="QWd-zI-Ry5" firstAttribute="centerX" secondItem="Tep-as-6eI" secondAttribute="centerX" id="Eez-dc-c6E"/>
+                                    <constraint firstItem="QWd-zI-Ry5" firstAttribute="leading" secondItem="Tep-as-6eI" secondAttribute="leadingMargin" id="aIp-Ga-ARq"/>
+                                    <constraint firstItem="QWd-zI-Ry5" firstAttribute="top" secondItem="Tep-as-6eI" secondAttribute="topMargin" id="t5X-Uy-1ni"/>
+                                    <constraint firstItem="QWd-zI-Ry5" firstAttribute="centerY" secondItem="Tep-as-6eI" secondAttribute="centerY" id="yMG-U3-RpT"/>
+                                </constraints>
+                                <size key="customSize" width="250" height="250"/>
+                                <connections>
+                                    <outlet property="parseImage" destination="QWd-zI-Ry5" id="7WP-RG-cIN"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="fAm-zr-8bo" id="JLS-JP-FcA"/>
+                            <outlet property="delegate" destination="fAm-zr-8bo" id="fNL-5c-stx"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="imagesCollection" destination="S2u-B2-Vdb" id="4SN-4b-3jc"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3OM-le-StR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1738" y="413"/>
+        </scene>
+        <!--Upload Image View Controller-->
+        <scene sceneID="tVY-vr-J9M">
+            <objects>
+                <viewController id="KpY-z8-VWB" customClass="UploadImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nkk-MS-Kv5"/>
+                        <viewControllerLayoutGuide type="bottom" id="usT-W5-JLl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2WR-Gw-R5l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEA-1P-tlX">
+                                <rect key="frame" x="264" y="72" width="73" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pvd-uk-WRX"/>
+                                    <constraint firstAttribute="width" constant="73" id="qOe-QI-IJa"/>
+                                </constraints>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadPhoto:" destination="KpY-z8-VWB" eventType="touchUpInside" id="AwN-SD-5hk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTB-EU-Q1H">
+                                <rect key="frame" x="213" y="120" width="175" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="6uR-s4-X83"/>
+                                    <constraint firstAttribute="height" constant="30" id="ULa-xj-UHc"/>
+                                </constraints>
+                                <state key="normal" title="Select From PhotoLibrary"/>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="KpY-z8-VWB" eventType="touchUpInside" id="aSy-eF-eDj"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MJ7-27-wc8">
+                                <rect key="frame" x="175" y="255" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="00j-hj-8ph"/>
+                                    <constraint firstAttribute="height" constant="250" id="lLt-Xs-PJM"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UPs-nB-41F">
+                                <rect key="frame" x="175" y="181" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="VLj-mA-rHt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UPs-nB-41F" firstAttribute="top" secondItem="mTB-EU-Q1H" secondAttribute="bottom" constant="31" id="GCa-pE-SoR"/>
+                            <constraint firstItem="MJ7-27-wc8" firstAttribute="centerX" secondItem="2WR-Gw-R5l" secondAttribute="centerX" id="HpA-Nr-W6p"/>
+                            <constraint firstItem="lEA-1P-tlX" firstAttribute="centerX" secondItem="2WR-Gw-R5l" secondAttribute="centerX" id="RXP-A8-KCy"/>
+                            <constraint firstItem="UPs-nB-41F" firstAttribute="centerX" secondItem="2WR-Gw-R5l" secondAttribute="centerX" id="cN8-Vy-kFs"/>
+                            <constraint firstItem="mTB-EU-Q1H" firstAttribute="centerX" secondItem="2WR-Gw-R5l" secondAttribute="centerX" id="lDc-2u-3QU"/>
+                            <constraint firstItem="lEA-1P-tlX" firstAttribute="top" secondItem="nkk-MS-Kv5" secondAttribute="bottom" constant="8" id="n8H-wd-ajB"/>
+                            <constraint firstItem="MJ7-27-wc8" firstAttribute="top" secondItem="mTB-EU-Q1H" secondAttribute="bottom" constant="105" id="pnZ-ye-TRC"/>
+                            <constraint firstItem="mTB-EU-Q1H" firstAttribute="top" secondItem="lEA-1P-tlX" secondAttribute="bottom" constant="18" id="thh-LD-xAx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentTextField" destination="UPs-nB-41F" id="M9O-6N-6ei"/>
+                        <outlet property="imgToUpload" destination="MJ7-27-wc8" id="YyH-qf-VZ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qT3-xV-Pvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1027" y="-326"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +142,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter city name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4s-EZ-ABx">
+                                <rect key="frame" x="120" y="162" width="361" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bw-ug-JEW">
+                                <rect key="frame" x="215" y="273" width="170" height="30"/>
+                                <state key="normal" title="Search For Images"/>
+                                <connections>
+                                    <action selector="searchImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BPm-5R-sf8"/>
+                                    <segue destination="fAm-zr-8bo" kind="show" id="Pv7-yH-AVn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwV-34-rjE">
+                                <rect key="frame" x="253" y="337" width="95" height="30"/>
+                                <state key="normal" title="Upload Image"/>
+                                <connections>
+                                    <action selector="uploadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RS2-rB-nfc"/>
+                                    <segue destination="KpY-z8-VWB" kind="show" identifier="MySegue" id="y36-DL-Lcy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8bw-ug-JEW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1YA-gB-uyu"/>
+                            <constraint firstItem="BwV-34-rjE" firstAttribute="top" secondItem="8bw-ug-JEW" secondAttribute="bottom" constant="34" id="4HN-62-ygk"/>
+                            <constraint firstItem="8bw-ug-JEW" firstAttribute="top" secondItem="v4s-EZ-ABx" secondAttribute="bottom" constant="81" id="Fnb-3b-0I0"/>
+                            <constraint firstItem="v4s-EZ-ABx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KYy-Xm-HQo"/>
+                            <constraint firstItem="BwV-34-rjE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wvo-gR-eVj"/>
+                            <constraint firstItem="v4s-EZ-ABx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="98" id="uUC-0w-ENg"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ptk-5A-hrZ"/>
+                    <connections>
+                        <outlet property="cityName" destination="v4s-EZ-ABx" id="2K5-mo-POu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1049" y="413"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Wa-cj-abs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="muP-np-yR7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nJQ-Cc-DQ3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kwc-cI-YpS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WVU-BA-PVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="235" y="413"/>
         </scene>
     </scenes>
 </document>

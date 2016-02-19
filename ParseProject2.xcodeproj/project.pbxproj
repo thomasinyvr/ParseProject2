@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3C5C9FCBFE0E173D3DD7503 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38601CC3EEA0612AB09E9BB2 /* Pods.framework */; };
 		FCDD34AA1C767B1200534A57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDD34A91C767B1200534A57 /* main.m */; };
 		FCDD34AD1C767B1200534A57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDD34AC1C767B1200534A57 /* AppDelegate.m */; };
 		FCDD34B01C767B1200534A57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDD34AF1C767B1200534A57 /* ViewController.m */; };
@@ -15,6 +16,9 @@
 		FCDD34B81C767B1200534A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDD34B61C767B1200534A57 /* LaunchScreen.storyboard */; };
 		FCDD34C31C767B1200534A57 /* ParseProject2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDD34C21C767B1200534A57 /* ParseProject2Tests.m */; };
 		FCDD34CE1C767B1200534A57 /* ParseProject2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDD34CD1C767B1200534A57 /* ParseProject2UITests.m */; };
+		FCDD34DD1C76855200534A57 /* ParseImagesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDD34DC1C76855200534A57 /* ParseImagesCollectionViewController.m */; };
+		FCDD34E01C76956600534A57 /* ImageExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDD34DF1C76956600534A57 /* ImageExampleCell.m */; };
+		FCDD34E31C76A20F00534A57 /* UploadImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDD34E21C76A20F00534A57 /* UploadImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38601CC3EEA0612AB09E9BB2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DFBDFA0C5519C727453EEDD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D7E344D46363DA99022E5E43 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FCDD34A51C767B1200534A57 /* ParseProject2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseProject2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCDD34A91C767B1200534A57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FCDD34AB1C767B1200534A57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +58,12 @@
 		FCDD34C91C767B1200534A57 /* ParseProject2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParseProject2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCDD34CD1C767B1200534A57 /* ParseProject2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseProject2UITests.m; sourceTree = "<group>"; };
 		FCDD34CF1C767B1200534A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCDD34DB1C76855200534A57 /* ParseImagesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseImagesCollectionViewController.h; sourceTree = "<group>"; };
+		FCDD34DC1C76855200534A57 /* ParseImagesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseImagesCollectionViewController.m; sourceTree = "<group>"; };
+		FCDD34DE1C76956600534A57 /* ImageExampleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageExampleCell.h; sourceTree = "<group>"; };
+		FCDD34DF1C76956600534A57 /* ImageExampleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageExampleCell.m; sourceTree = "<group>"; };
+		FCDD34E11C76A20F00534A57 /* UploadImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UploadImageViewController.h; path = ../UploadImageViewController.h; sourceTree = "<group>"; };
+		FCDD34E21C76A20F00534A57 /* UploadImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UploadImageViewController.m; path = ../UploadImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C5C9FCBFE0E173D3DD7503 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D03EC72B35BADD1FFC3CD9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38601CC3EEA0612AB09E9BB2 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E31ACD93FE7CAC9DC818DA3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DFBDFA0C5519C727453EEDD /* Pods.debug.xcconfig */,
+				D7E344D46363DA99022E5E43 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FCDD349C1C767B1200534A57 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +116,8 @@
 				FCDD34C11C767B1200534A57 /* ParseProject2Tests */,
 				FCDD34CC1C767B1200534A57 /* ParseProject2UITests */,
 				FCDD34A61C767B1200534A57 /* Products */,
+				E31ACD93FE7CAC9DC818DA3A /* Pods */,
+				1D03EC72B35BADD1FFC3CD9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +138,12 @@
 				FCDD34AC1C767B1200534A57 /* AppDelegate.m */,
 				FCDD34AE1C767B1200534A57 /* ViewController.h */,
 				FCDD34AF1C767B1200534A57 /* ViewController.m */,
+				FCDD34DB1C76855200534A57 /* ParseImagesCollectionViewController.h */,
+				FCDD34DC1C76855200534A57 /* ParseImagesCollectionViewController.m */,
+				FCDD34DE1C76956600534A57 /* ImageExampleCell.h */,
+				FCDD34DF1C76956600534A57 /* ImageExampleCell.m */,
+				FCDD34E11C76A20F00534A57 /* UploadImageViewController.h */,
+				FCDD34E21C76A20F00534A57 /* UploadImageViewController.m */,
 				FCDD34B11C767B1200534A57 /* Main.storyboard */,
 				FCDD34B41C767B1200534A57 /* Assets.xcassets */,
 				FCDD34B61C767B1200534A57 /* LaunchScreen.storyboard */,
@@ -147,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCDD34D21C767B1200534A57 /* Build configuration list for PBXNativeTarget "ParseProject2" */;
 			buildPhases = (
+				2766B64E4DB17BCC3C27A28D /* Check Pods Manifest.lock */,
 				FCDD34A11C767B1200534A57 /* Sources */,
 				FCDD34A21C767B1200534A57 /* Frameworks */,
 				FCDD34A31C767B1200534A57 /* Resources */,
+				49802C6E069D7C4CE5BC1C52 /* Embed Pods Frameworks */,
+				035ED8C7E1EA284255C1DFF8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,13 +310,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		035ED8C7E1EA284255C1DFF8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2766B64E4DB17BCC3C27A28D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		49802C6E069D7C4CE5BC1C52 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FCDD34A11C767B1200534A57 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCDD34DD1C76855200534A57 /* ParseImagesCollectionViewController.m in Sources */,
 				FCDD34B01C767B1200534A57 /* ViewController.m in Sources */,
 				FCDD34AD1C767B1200534A57 /* AppDelegate.m in Sources */,
+				FCDD34E31C76A20F00534A57 /* UploadImageViewController.m in Sources */,
+				FCDD34E01C76956600534A57 /* ImageExampleCell.m in Sources */,
 				FCDD34AA1C767B1200534A57 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +505,7 @@
 		};
 		FCDD34D31C767B1200534A57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DFBDFA0C5519C727453EEDD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ParseProject2/Info.plist;
@@ -423,6 +517,7 @@
 		};
 		FCDD34D41C767B1200534A57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7E344D46363DA99022E5E43 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ParseProject2/Info.plist;
@@ -499,6 +594,7 @@
 				FCDD34D41C767B1200534A57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCDD34D51C767B1200534A57 /* Build configuration list for PBXNativeTarget "ParseProject2Tests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +603,7 @@
 				FCDD34D71C767B1200534A57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCDD34D81C767B1200534A57 /* Build configuration list for PBXNativeTarget "ParseProject2UITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +612,7 @@
 				FCDD34DA1C767B1200534A57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
